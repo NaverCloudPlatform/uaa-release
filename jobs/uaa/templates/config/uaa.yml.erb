@@ -151,6 +151,11 @@
     end
   end
 
+  uaa_db_password_encoding_id = 'bcrypt'
+  if p_opt('uaadb.password_encoding_id')
+    uaa_db_password_encoding_id = p('uaadb.password_encoding_id')
+  end
+
   raise ArgumentError, 'Invalid value for uaa.client.redirect_uri.matching_mode. Valid options are legacy or exact.' unless ['legacy', 'exact'].include?(p('uaa.client.redirect_uri.matching_mode'))
 
   spring_profiles = uaa_db_scheme
@@ -184,7 +189,8 @@
       'removeabandoned' => p('uaa.database.remove_abandoned'),
       'logabandoned' =>  p('uaa.database.log_abandoned'),
       'abandonedtimeout' => p('uaa.database.abandoned_timeout'),
-      'testwhileidle' => p('uaa.database.test_while_idle')
+      'testwhileidle' => p('uaa.database.test_while_idle'),
+      'passwordEncodingId' => uaa_db_password_encoding_id
     },
     'authentication' => {
       'enableUriEncodingCompatibilityMode' => p('uaa.authentication.enable_uri_encoding_compatibility_mode'),

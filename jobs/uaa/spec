@@ -114,6 +114,9 @@ properties:
       - name: uaa
         password: database-password-for-user-uaa
         tag: admin
+  uaadb.password_encoding_id:
+    description: "The UAA database password encodingId (default: bcrypt)"
+    example: bcrypt, pbkdf2, sha256
 
   # General server properties
   uaa.catalina_opts:
