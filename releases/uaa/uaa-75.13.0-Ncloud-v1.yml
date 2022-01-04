@@ -1,0 +1,26 @@
+name: uaa
+version: 75.13.0-Ncloud-v1
+commit_hash: d6052a9
+uncommitted_changes: false
+jobs:
+- name: bbr-uaadb
+  version: b10586c070c07129cd8f62188cd4754c403fb163812607dce31985e8e61781f0
+  fingerprint: b10586c070c07129cd8f62188cd4754c403fb163812607dce31985e8e61781f0
+  sha1: sha256:d1ed1f3056979fdac54590424d9be63ba9e9b03eaf6292984d1028de7dae96a9
+  packages: []
+- name: uaa
+  version: 9ed45c1a8f76e089becc40d0a400a4afe3a93f821ee70ace210aceee49c390ea
+  fingerprint: 9ed45c1a8f76e089becc40d0a400a4afe3a93f821ee70ace210aceee49c390ea
+  sha1: sha256:f159fca390d46b02e740cc9f2552a993a74e74e4e3d6fa338a93624ca1e9bc04
+  packages:
+  - uaa
+packages:
+- name: uaa
+  version: dbd9401de368f2aa0e6f6cd0f34c6b60ff185720278996079745bdcda5b9f4a8
+  fingerprint: dbd9401de368f2aa0e6f6cd0f34c6b60ff185720278996079745bdcda5b9f4a8
+  sha1: sha256:b3c910336760f82a6fb5a0a33c143d66373256eb7dbb454ad328a6f39d28c8f1
+  dependencies: []
+license:
+  version: cc48a230dddf0499912777ce8ccf63b8ed7c22a4106f30b6934679272826f430
+  fingerprint: cc48a230dddf0499912777ce8ccf63b8ed7c22a4106f30b6934679272826f430
+  sha1: sha256:f98289619ac04578182dd62ac10ea1e940d05c35a045d87287ea8183af4e0315
